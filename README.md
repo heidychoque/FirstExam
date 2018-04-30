@@ -41,5 +41,4 @@
  9. Push your branch.
  10. Create a Pull Request.
 
-Commit format messages: "FE001 - Commit message".
-Example: "FE001 - Add git ignore file."
+Commit messages format: "FE001 - Commit message". Example: "FE001 - Add git ignore file."
