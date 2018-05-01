@@ -1,2 +1,6 @@
 # ignore build file
 build/
+
+node_modules/
+
+package-lock.json
