@@ -16,4 +16,24 @@ module.exports = function (grunt) {
 
 	  }
   	});
+
+
+  	grunt.registerTask('tarea1',function(){
+		grunt.file.copy(config.srcFolder + '/index.html', config.buildFolder + '/index.html',
+		 {
+		
+			process: function(files) {
+				return grunt.template.process(files,
+					{
+						data: {
+							pageTitle: config.pageTitle,
+							Content: config.Content						}
+					}
+					);
+
+	   	 }
+		});
+
+
+	});
 };
