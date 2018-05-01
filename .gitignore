@@ -1,2 +1,8 @@
 #ignore build
-build/   
+build/
+
+#ignore dependencias de npm
+node_modules/
+/package-lock.json
+
+ 
