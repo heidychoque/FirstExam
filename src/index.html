@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Holi!</title>
+	<% styles.forEach(function(styleFile)  {%>
+	<link rel="stylesheet" type="text/css" href= "<%= styleFile %>" > <!--asociar al html algun recurso externo-->
+	<% }); %>
+	<% scripts.forEach(function(scriptFile) {%>
+	<script type="text/javascript" src="<%= scriptFile %>"></script>
+	<% }); %>
+	<title> <%= pageTitle %></title>
 </head>
 <body>
 
+	<%= content %>
 </body>
 </html>
