@@ -38,4 +38,5 @@ module.exports = function (grunt){
         });
         
     });
+    grunt.registerTask('doALL', ['concatJS' , 'concatCSS' , 'templateHTML'] );
 }
