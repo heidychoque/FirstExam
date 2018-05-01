@@ -12,7 +12,7 @@ module.exports = function(grunt){
             },
             CSS: {
               src: [config.srcFolder + '/css/first.css', config.srcFolder + '/css/second.css', config.srcFolder + '/css/third.css'],
-              dest: config.buildFolder+"/styles.js"
+              dest: config.buildFolder+"/styles.css"
             }    
         }
     });
@@ -20,4 +20,21 @@ module.exports = function(grunt){
     grunt.registerTask('concatJS', ['concat:JS']);
         
     grunt.registerTask('concatCSS', ['concat:CSS']);
+
+    grunt.registerTask('generateIndex', function(){
+        grunt.file.copy(config.srcFolder + '/index.html', config.buildFolder + '/index.html',{
+            process: function(files){
+                return grunt.template.process(files,{
+                    data: {
+                        pageTitle: config.pageTitle,
+                        content: config.pageConten,
+                        styles: 'styles.css',
+                        scripts: 'scripts.js'
+                    }
+                });
+            }
+        });
+    });
+
+    grunt.registerTask('build', ['concatJS','concatCSS','generateIndex']);
 }
