@@ -2,8 +2,7 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     
-    grunt.initConfig({
-        
+    grunt.initConfig({   
         config: grunt.file.readJSON('config.json'),
         concat: {
           JS: {
@@ -16,5 +15,8 @@ module.exports = function (grunt) {
           }
         }
     });
+
+    grunt.registerTask('concatJS', 'concat:JS');
+    grunt.registerTask('concatCSS', 'concat:CSS');
     
 };
