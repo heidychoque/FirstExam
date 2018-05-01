@@ -2,7 +2,7 @@
 
 	"pageTitle": "FIRST EXAMN",
 	"pageContent" : "My Page Title",
-	"builFolder" : "build",
+	"buildFolder" : "build",
 	"srcFolder" : "src"
 
 }
