@@ -24,6 +24,18 @@ module.exports = function (grunt) {
 
 
 
+  	grunt.registerTask('generar',function(){ 
+		var config = grunt.file.readJSON('config.json');
+		var jsonVar={prop1:true};
+grunt.file.copy(config.srcFolder+'/index.html',config.buildFolder+'/index.html',{process: function(files){
+	//console.log(content);
+
+return grunt.template.process(files,{data: {pageTitle: config.pageTitle,styles:["first.css","second.css","third.css"],content: config.content}});
+}});
+	 });
+
+
+
 
   	
 
