@@ -5,6 +5,12 @@
 		<link rel="stylesheet" type="text/css" href="<%= file %>" />
 <% }); %>
 
+<% js.forEach( function ( file ) { %>
+		<script rel="stylesheet" type="text/js" href="<%= file %>"></script>
+<% }); %>
+
+
+
 	<title> <%= pageTitle %></title>
 </head>
 <body>
