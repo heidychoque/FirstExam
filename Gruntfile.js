@@ -8,11 +8,11 @@ module.exports = function (grunt) {
 	    concatJS: {
 	      src: [config.srcFolder + '/js/one.js', config.srcFolder +'/js/two.js'],
 	      dest: config.buildFolder + '/scripts.js'
+	    },
+	    concatCSS: {
+	      src: [config.srcFolder + '/css/first.css', config.srcFolder + '/css/second.css' , config.srcFolder +'/css/third.css'],
+	      dest: config.buildFolder +'/styles.css'
 	    }
-	    /*concatCSS: {
-	      src: ['css/first.css', 'css/second.css' , 'css/third.css'],
-	      dest: 'buildFolder/styles.js'
-	    }*/
 
 	  }
   	});
