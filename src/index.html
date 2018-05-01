@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<% styles.forEach( function ( file ) { %>
+		<link rel="stylesheet" type="text/css" href="<%= file %>" />
+<% }); %>
+
+	<title> <%= pageTitle %></title>
 </head>
 <body>
+	<%= content %>
 
 </body>
 </html>
