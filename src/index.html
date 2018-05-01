@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% styles.forEach(function(styleFile) {%>
+	<link rel="stylesheet" type="text/css" href="<%= styleFile %>">
+	<% }); %>
+	<title><%= pageTitle %></title>
+</head>
+<body>
+	<%= content %>
+
+</body>
+</html>
