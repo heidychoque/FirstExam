@@ -35,6 +35,9 @@ module.exports = function (grunt) {
 			);
 		});
 
+  	grunt.registerTask('build', 
+		['generateIndex', 'concat:JS', 'concat:CSS']);
+
 
 
 };
