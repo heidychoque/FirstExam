@@ -24,7 +24,8 @@ module.exports = function (grunt) {
 					{
 						data: {
 							pageTitle: config.pageTitle,
-							styles:[config.srcFolder+"/css/first.css",config.srcFolder+"/css/second.css",config.srcFolder+"/css/third.css"],
+							styles:[config.buildFolder+"/styles.css"],
+							scripts:[config.buildFolder+"/scripts.js"],
 							content: config.content
 						}
 					}

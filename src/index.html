@@ -4,6 +4,10 @@
 	<% styles.forEach(function(styleFile) {%>
 	<link rel="stylesheet" type="text/css" href="<%= styleFile %>">
 	<% }); %>
+
+	<% scripts.forEach(function(scriptFile) {%>
+	<script type="text/javascript" src="<%= scriptFile %>"></script>
+	<% }); %>
 	<title><%= pageTitle %></title>
 </head>
 <body>
