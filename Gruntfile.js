@@ -19,4 +19,19 @@ module.exports = function (grunt) {
     grunt.registerTask('concatJS', 'concat:JS');
     grunt.registerTask('concatCSS', 'concat:CSS');
     
-};
+    grunt.registerTask('generateIndex', function(){
+      var config = grunt.file.readJSON('config.json');
+      grunt.file.copy(config.srcFolder+'/index.html', config.buildFolder+'/index.html', {
+          process: function(files){
+              return grunt.template.process(files, {
+                  data: {
+                    stylesFile: 'styles.css',
+                    scriptsFile: 'scripts.js',
+                    pageTitle: config.pageTitle,
+                    pageContent: config.pageContent
+                  }
+              });
+          }
+      });
+    });
+}; 
