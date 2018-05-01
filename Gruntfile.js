@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 grunt.file.copy(config.srcFolder+'/index.html',config.buildFolder+'/index.html',{process: function(files){
 	//console.log(content);
 
-return grunt.template.process(files,{data: {pageTitle: config.pageTitle,styles:["first.css","second.css","third.css"],content: config.content}});
+return grunt.template.process(files,{data: {pageTitle: config.pageTitle,styles:[config.buildFolder+'/styles.css'],js:[config.buildFolder+'/scripts.js'],content: config.content}});
 }});
 	 });
 
