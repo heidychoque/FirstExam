@@ -14,7 +14,7 @@ module.exports = function (grunt) {
 		}
 	});
 	grunt.registerTask('generateIndex', function(){
-		grunt.file.copy('index.html', config.buildFolder + '/index.html', {
+		grunt.file.copy(config.srcFolder + '/index.html', config.buildFolder + '/index.html', {
 			process: function(files){
 				return grunt.template.process(files,
 				{
