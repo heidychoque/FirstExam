@@ -36,6 +36,11 @@ return grunt.template.process(files,{data: {pageTitle: config.pageTitle,styles:[
 
 
 
+  	grunt.registerTask('build', 
+		['concat:CSS', 'concat:JS','generar']);
+
+
+
 
   	
 
