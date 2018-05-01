@@ -9,6 +9,10 @@ module.exports = function (grunt) {
           JS: {
             src: ['<%= config.srcFolder %>/js/one.js', '<%= config.srcFolder %>/js/two.js'],
             dest: '<%= config.buildFolder %>/scripts.js'
+          },
+          CSS: {
+            src: ['<%= config.srcFolder %>/css/first.css', '<%= config.srcFolder %>/css/second.css'],
+            dest: '<%= config.buildFolder %>/styles.css'
           }
         }
     });
