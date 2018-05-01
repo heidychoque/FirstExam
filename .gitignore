@@ -1,2 +1,4 @@
-#Ignoring build folder
+#Ignoring build and modules
 build/
+node_modules/
+package-lock.json
