@@ -30,4 +30,29 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('concatCSS','concat:Css');
 
+	grunt.registerTask('formatHTML',function(){
+	
+		grunt.file.copy('src/index.html', 'build/index.html',{
+
+			process: function funcion(fileContent) {
+
+				return grunt.template.process(fileContent,{
+
+					data: {
+
+						pageTitle : config.pageTitle,
+						pageContent : config.pageContent,
+						scripts: 'script.js',
+						styles: 'styles.css',
+
+					},
+
+				});
+
+			}
+
+		});
+
+	});
+
 };
