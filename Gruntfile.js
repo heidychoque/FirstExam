@@ -28,4 +28,6 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('concatJS','concat:Js');
 
+	grunt.registerTask('concatCSS','concat:Css');
+
 };
