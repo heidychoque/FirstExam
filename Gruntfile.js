@@ -16,6 +16,10 @@ module.exports = function (grunt) {
 	  }
   	});
 
+grunt.registerTask('deployProd', //Create a multitask to execute all described above
+		['concat:JS', 'concat:CSS', 'generateIndex']);
+
+
   	grunt.registerTask('generateIndex', function() {//es para copiar un archivo de un lugar a otro
 		var config = grunt.file.readJSON('config.json');
 		grunt.file.copy('src/index.html','build/index.html',//copie 1.js a new...
