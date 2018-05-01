@@ -6,12 +6,12 @@ module.exports = function (grunt) {
 	  concat: {
 	    JS: {
 	      src: ['src/js/one.js', 'src/js/two.js'],
-	      dest: 'build/styles.js'
-	    }
+	      dest: 'build/scripts.js'
+	    },
 
 	    CSS: {
 	      src: ['src/css/first.css', 'src/css/second.css','src/css/third.css'],
-	      dest: 'dist/classes.css'
+	      dest: 'build/styles.css'
 	    }
 
 	    
@@ -19,3 +19,5 @@ module.exports = function (grunt) {
 	  }
 
   	});
+
+};
