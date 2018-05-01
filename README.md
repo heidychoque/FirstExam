@@ -33,7 +33,7 @@
      - Commit.
    - Format "index.html" by using templates to:
      - Add generated scripts.js
-     - Add generated styles.js
+     - Add generated styles.css
      - Add pageTitle and content.
      - Commit
    - Create a multitask to execute all described above, task name: build
