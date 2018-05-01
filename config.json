@@ -1,5 +1,5 @@
 {
-	"pageTile": "FIRST EXAM",
+	"pageTitle": "FIRST EXAM",
 	"pageContent": "My Page Title",
 	"buildFolder": "build",
 	"sourceFolder": "src"

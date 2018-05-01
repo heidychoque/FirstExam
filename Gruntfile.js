@@ -17,4 +17,20 @@ module.exports = function(grunt){
 		}
 	});
 
+	grunt.registerTask('generateIndex', function() {
+		console.log(config.pageTitle);
+		grunt.file.copy(config.sourceFolder + '/index.html', config.buildFolder + '/index.html', {
+			process: function(files){
+				return grunt.template.process(files, {
+					data: {
+						pageTitle: config.pageTitle,
+						pageContent: config.pageContent,
+						styles: [config.buildFolder + '/styles.css'],
+						scripts: [config.buildFolder + '/scripts.js']
+					}
+				});
+			}
+		});
+	});
+
 }

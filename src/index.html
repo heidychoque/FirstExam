@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> </title>
+	<% styles.forEach( function(stylefile) {%>
+		<link rel="stylesheet" type="text/css" href="<%= stylefile%>">
+	<% }); %>
+
+	<% scripts.forEach( function(scriptfile) {%>
+		<script type="text/javascript" src="<%= scriptfile%>"></script>
+	<% }); %>
+	
+	<title> <%=pageTitle%> </title>
 </head>
 <body>
-
+	<%=pageContent%>
 </body>
 </html>
