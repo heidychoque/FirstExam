@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 	  concat: {
 	    JS: {
 	      src: ['src/js/one.js', 'src/js/two.js'],
-	      dest: 'build/scripts.js'
+	      dest: 'build/script.js'
 	    }
 	  }
   	});
