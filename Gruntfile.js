@@ -1,16 +1,16 @@
 module.exports = function (grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
-
+	var config = grunt.file.readJSON('config.json');
   	grunt.initConfig({
 	  concat: {
 	    JS: {
-	      src: ['src/js/one.js', 'src/js/two.js'],
-	      dest: 'build/scripts.js'
+	      src: [config.srcFolder+'/js/one.js', config.srcFolder+'/js/two.js'],
+	      dest: config.buildFolder+'/scripts.js'
 	    },
 	    CSS: {
-	      src: ['src/css/first.css', 'src/css/second.css','src/css/third.css'],
-	      dest: 'build/styles.css'
+	      src: [config.srcFolder+'/css/first.css', config.srcFolder+'/css/second.css',config.srcFolder+'/css/third.css'],
+	      dest: config.buildFolder+'/styles.css'
 	    }
 	  }
   	});
