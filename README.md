@@ -12,8 +12,8 @@
      - Create an index.html at "src" folder. *CONTENT:* Basic HTML content.
    - Commit
 4. Prepare a grunt project, name the project as: FirstExam.
-5. Commit the package.json
-6. Ignore (.gitignore) the following: node_modules, package-lock.json => Commit.
+5. Ignore (.gitignore) the following: node_modules, package-lock.json => Commit.
+6. Commit the package.json
 7. Once grunt project is setup, do the following:
    - Create Gruntfile.js
    - Create a config.json file with the following: 
@@ -23,11 +23,11 @@
      - srcFolder="src"   
    - Commit
 8. Create grunt tasks to:
-   - Concat Javascript files from <srcFolder> folder and place to <buildFolder> folder.
+   - Concat Javascript files from srcFolder folder and place to buildFolder folder.
      - Concat task name: concatJS
      - Concatenated file name: scripts.js
      - Commit.
-   - Concat Styles files from <srcFolder> folder and place to <buildFolder> folder.
+   - Concat Styles files from srcFolder folder and place to buildFolder folder.
      - Concat task name: concatCSS
      - Concatenated file name: styles.js
      - Commit.
