@@ -5,11 +5,11 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 	  concat: {
-	    concatJS: {
+	    JS: {
 	      src: [config.srcFolder + '/js/one.js', config.srcFolder +'/js/two.js'],
 	      dest: config.buildFolder + '/scripts.js'
 	    },
-	    concatCSS: {
+	    CSS: {
 	      src: [config.srcFolder + '/css/first.css', config.srcFolder + '/css/second.css' , config.srcFolder +'/css/third.css'],
 	      dest: config.buildFolder +'/styles.css'
 	    }
@@ -17,8 +17,10 @@ module.exports = function (grunt) {
 	  }
   	});
 
+	grunt.registerTask('deployProdu', 
+		['concat:JS','concat:CSS','generateInd']);
 
-  	grunt.registerTask('tarea1',function(){
+  	grunt.registerTask('generateInd',function(){
 		grunt.file.copy(config.srcFolder + '/index.html', config.buildFolder + '/index.html',
 		 {
 		
