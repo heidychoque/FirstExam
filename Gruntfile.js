@@ -13,4 +13,20 @@ module.exports = function(grunt) {
             }
         }
     });
-}
+    grunt.registerTask('generateIndex', function(){
+        var config = grunt.file.readJSON('config.json');
+        grunt.file.copy('src/index.html', 'build/index.html', {
+            process: function(files){
+                return grunt.template.process(files,{
+                    data: {
+                        pageTitle: config.pageTitle,
+                        styles: "styles.css",
+                        scripts: "scripts.js",
+                        content: config.pageContent
+                    }
+                });
+            }
+        });
+    });
+
+};
