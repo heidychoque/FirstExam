@@ -4,12 +4,18 @@ module.exports = function(grunt) {
     grunt.initConfig({
         concat: {
             JS : {
-                src: ['/src/js/one.js', '/src/js/two.js'],
+                src: ['src/js/one.js', 'src/js/two.js'],
                 dest:'build/scripts.js'
+            },
+            CSS : {
+                src: ['src/css/first.css', 'src/css/second.css', 'src/css/third.css'],
+                dest:'build/styles.js'
             }
         }
     });
 
     grunt.registerTask('concatJS','concat:JS');
+
+    grunt.registerTask('concatCSS','concat:CSS');
 
 };
