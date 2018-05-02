@@ -5,7 +5,7 @@ module.exports = function (grunt){
         config: grunt.file.readJSON('config.json'),
         concat: {
         concatJS: {
-            src: ['/js/one.js','src/js/two.js'],
+            src: ['src/js/one.js','src/js/two.js'],
             dest: 'build/scripts.js'
         },
         concatCSS:{
@@ -36,5 +36,4 @@ module.exports = function (grunt){
         });
         
     });
-    grunt.registerTask('doALL', ['concatJS' , 'concatCSS' , 'templateHTML'] );
-}
+    }
