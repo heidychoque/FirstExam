@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mauricioterceros/FirstExam/issues"
   },
-  "homepage": "https://github.com/mauricioterceros/FirstExam#readme"
+  "homepage": "https://github.com/mauricioterceros/FirstExam#readme",
+  "dependencies": {
+    "grunt": "^1.0.2"
+  }
 }
