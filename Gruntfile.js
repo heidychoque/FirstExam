@@ -18,4 +18,22 @@ module.exports = function(grunt) {
 
     grunt.registerTask('concatCSS','concat:CSS');
 
+    grunt.registerTask('generateIndex', function() {
+        var config = grunt.file.readJSON('config.json');
+        grunt.file.copy(config.srcFolder + '/index.html', config.buildFolder + '/index.html' , {
+            process: function (files) {
+                return grunt.template.process(files,
+                    {
+                        data: {
+                            pageTitle: config.pageTitle,
+                            pageContent: config.pageContent,
+                            styles: [config.srcFolder + "/css/first.css", config.srcFolder + "/css/second.css", config.srcFolder + "/css/third.css"],
+                            scripts: [config.srcFolder + "/js/one.js", config.srcFolder + "/js/two.js"]
+                        }
+                    }
+                );
+            }
+        });
+    });
+
 };
