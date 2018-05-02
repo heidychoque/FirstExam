@@ -29,4 +29,8 @@ module.exports = function(grunt) {
         });
     });
 
+    grunt.registerTask('concatJS', 'concat:concatJS');
+    grunt.registerTask('concatCSS', 'concat:concatCSS');
+    grunt.registerTask('build', ['concatJS','concatCSS','generateIndex']);
+
 };
