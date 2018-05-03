@@ -14,5 +14,11 @@ module.exports = function (grunt) {
             }
           }
           });
+
+        grunt.registerTask('concatJS', ['concat:JS']);
+        grunt.registerTask('concatCSS', ['concat:CSS']);
+
+        grunt.registerTask('build', ['concatJS','concatCSS']);
+
     
 }    
