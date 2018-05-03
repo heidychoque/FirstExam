@@ -20,7 +20,9 @@ module.exports = function (grunt) {
 				{
 					data: { 
 						pageTitle: config.pageTitle,
-						pageContent: config.pageContent
+						pageContent: config.pageContent,
+						styleFile: 'styles.css',
+						scriptFile: 'scripts.js'
 					}
 				});
 			}
