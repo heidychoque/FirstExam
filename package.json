@@ -1,0 +1,23 @@
+{
+  "name": "firstexam",
+  "version": "1.0.0",
+  "description": "1. Clone this repository.\r 2. Create a new branch from DEVELOP branch.\r    Branch format name pattern: firstExam/NameLast, e.g.: firstExam/MauricioTerceros\r 3. In this new branch do the following:\r    - Create a .gitignore file and ignore the following folder: build\r    - Create a \"src\" folder with the following:\r      - Create two Javascript files at \"src/js\" folder: one.js and two.js. *CONTENT:* Free JS content.\r      - Create three CSS files at \"src/css\" folder: first.css, second.css and third.css *CONTENT:* Free CSS content.\r      - Create an index.html at \"src\" folder. *CONTENT:* Basic HTML content.\r    - Commit\r 4. Prepare a grunt project, name the project as: FirstExam.\r 5. Commit the package.json\r 6. Ignore (.gitignore) the following: node_modules, package-lock.json => Commit.\r 7. Once grunt project is setup, do the following:\r    - Create Gruntfile.js\r    - Create a config.json file with the following: \r      - pageTitle=\"FIRST EXAMN\"\r      - pageContent=\"My Page Title\"\r      - buildFolder=\"build\"\r      - srcFolder=\"src\"   \r    - Commit\r 8. Create grunt tasks to:\r    - Concat Javascript files from <srcFolder> folder and place to <buildFolder> folder.\r      - Concat task name: concatJS\r      - Concatenated file name: scripts.js\r      - Commit.\r    - Concat Styles files from <srcFolder> folder and place to <buildFolder> folder.\r      - Concat task name: concatCSS\r      - Concatenated file name: styles.js\r      - Commit.\r    - Format \"index.html\" by using templates to:\r      - Add generated scripts.js\r      - Add generated styles.js\r      - Add pageTitle and content.\r      - Commit\r    - Create a multitask to execute all described above, task name: build\r      - Commit\r  9. Push your branch.\r  10. Create a Pull Request.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauricioterceros/FirstExam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mauricioterceros/FirstExam/issues"
+  },
+  "homepage": "https://github.com/mauricioterceros/FirstExam#readme",
+  "dependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-concat": "^1.0.1"
+  }
+}
