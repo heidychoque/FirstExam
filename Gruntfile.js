@@ -11,7 +11,7 @@ module.exports = function(grunt){
 
             CSS: {
                 src: ['src/css/first.css', 'src/css/second.css', 'src/css/third.css'],
-                dest: 'build/styles.js'
+                dest: 'build/styles.csss'
             }
         }
     });
@@ -22,7 +22,15 @@ module.exports = function(grunt){
 
 
     grunt.registerTask('generateIndex', function(){
-		var config = grunt.file.readJSON('config.json');
+		//var config = grunt.file.readJSON('config.json');
+
+        var config = {};
+        
+        config.pageTitle = grunt.option("pageTitle");
+        config.pageContent = grunt.option("pageContent");
+        config.buildFolder = grunt.option("buildFolder");
+        config.srcFolder = grunt.option("srcFolder");
+
 
 		grunt.file.copy(config.srcFolder + '/index.html', config.buildFolder + '/index.html', 
 		{
@@ -31,9 +39,9 @@ module.exports = function(grunt){
 					{
 						data: {
 							pageTitle: config.pageTitle,
-							styles: [config.srcFolder + "/css/first.css", config.srcFolder + "/css/second.css", config.srcFolder + "/css/third.css"],
+							styles: config.buildFolder + "/styles.css",
                             content: config.pageContent,
-                            scripts: [config.srcFolder + "/js/one.js", config.srcFolder + "/js/two.js"]
+                            scripts: config.buildFolder + "/scripts.js"
 						}
 					}
 				);
