@@ -1,7 +1,18 @@
 module.exports = function (grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
-    var config = grunt.file.readJSON('config.json');
+
+    //var config = grunt.file.readJSON('config.json');
+    var config =
+    {
+
+	pageTitle : grunt.option('pageTitle') ,
+    pageContent : grunt.option('pageContent') ,
+    buildFolder : grunt.option('buildFolder') ,
+    srcFolder : grunt.option('srcFolder'),
+    Content : grunt.option('Content')
+    };
+   
 
 	grunt.initConfig({
 	  concat: {
