@@ -1,6 +1,14 @@
 module.exports = function (grunt){
     grunt.loadNpmTasks('grunt-contrib-concat');
 
+    var config =
+    {
+        pageTitle:grunt.option('title'),
+        pageContent: grunt.option('content'),
+        buildFolder:grunt.option('build'),
+        srcFolder:grunt.option('src'),
+    }
+
     grunt.initConfig({
         concat: {
         concatJS: {
@@ -21,7 +29,7 @@ module.exports = function (grunt){
 
 
     grunt.registerTask('templateHTML', function() {
-        var config = grunt.file.readJSON('config.json');
+        // var config = grunt.file.readJSON('config.json');
         grunt.file.copy('src/index.html', 'build/index.html', {
             process: function(files){
                 return grunt.template.process(files,
