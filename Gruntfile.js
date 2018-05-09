@@ -9,7 +9,7 @@ module.exports = function(grunt) {
             },
             CSS : {
                 src: ['src/css/first.css', 'src/css/second.css', 'src/css/third.css'],
-                dest:'build/styles.js'
+                dest:'build/styles.css'
             }
         }
     });
@@ -19,7 +19,13 @@ module.exports = function(grunt) {
     grunt.registerTask('concatCSS','concat:CSS');
 
     grunt.registerTask('generateIndex', function() {
-        var config = grunt.file.readJSON('config.json');
+        //var config = grunt.file.readJSON('config.json');
+        var config = {};
+        config.pageTitle = grunt.option('title');
+        config.pageContent = grunt.option('content');
+        config.buildFolder = grunt.option('build');
+        config.srcFolder = grunt.option('src')
+
         grunt.file.copy(config.srcFolder + '/index.html', config.buildFolder + '/index.html' , {
             process: function (files) {
                 return grunt.template.process(files,
@@ -27,8 +33,8 @@ module.exports = function(grunt) {
                         data: {
                             pageTitle: config.pageTitle,
                             pageContent: config.pageContent,
-                            styles: [config.srcFolder + "/css/first.css", config.srcFolder + "/css/second.css", config.srcFolder + "/css/third.css"],
-                            scripts: [config.srcFolder + "/js/one.js", config.srcFolder + "/js/two.js"]
+                            styles: config.buildFolder + "/styles.css",
+                            scripts: config.buildFolder + "/scripts.js"
                         }
                     }
                 );

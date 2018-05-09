@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <% styles.forEach( function(styleFile) { %>
-        <link rel="stylesheet" type="text/css" media="screen" href="<%=styleFile %>">
-    <% }); %>    
+    <link rel="stylesheet" type="text/css" media="screen" href="<%=styles%>">   
 
     <title> <%=pageTitle %> </title>
 
-    <% scripts.forEach( function(scriptFile) { %>
-        <script src="<%=scriptFile%>"></script>
-    <% }); %>
+    <script src="<%=scripts%>"></script>
 </head>
 <body>
     <%=pageContent%>
