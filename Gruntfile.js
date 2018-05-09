@@ -1,6 +1,16 @@
 module.exports = function (grunt){
     grunt.loadNpmTasks('grunt-contrib-concat');
 
+
+    var config =
+    {
+
+        pageTitle:"FIRST EXAMN",
+        pageContent: grunt.option(content),
+        buildFolder:"build",
+        srcFolder:"src"
+    };
+
     grunt.initConfig({
         config: grunt.file.readJSON('config.json'),
         concat: {
@@ -19,8 +29,11 @@ module.exports = function (grunt){
 
 
     grunt.registerTask('templateHTML', function() {
-        var config = grunt.file.readJSON('config.json');
-        grunt.file.copy(config.srcFolder+'/index.html', config.buildFolder+'/index.html', {
+      //  var config = grunt.file.readJSON('config.json');
+        
+      
+      
+      grunt.file.copy(config.srcFolder+'/index.html', config.buildFolder+'/index.html', {
             process: function(files){
                 return grunt.template.process(files,
                     {
