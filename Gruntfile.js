@@ -1,7 +1,17 @@
 module.exports = function (grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	var config = grunt.file.readJSON('config.json');
+	//var config = grunt.file.readJSON('config.json');
+		var config=
+	{	
+		pageTitle: grunt.option('pageTitle'),
+		pageContent: grunt.option('pageContent'),
+		buildFolder: grunt.option('buildFolder'),
+		srcFolder: grunt.option('srcFolder'),
+		content: grunt.option('content')
+	};
+
+	//config.content=grunt.option("content");
   	grunt.initConfig({
 	  concat: {
 	    JS: {
@@ -16,7 +26,15 @@ module.exports = function (grunt) {
   	});
 
   	grunt.registerTask('generateIndex',function(){
-		var config = grunt.file.readJSON('config.json');
+		//var config = grunt.file.readJSON('config.json');
+		var config=
+	{	
+		pageTitle: grunt.option('pageTitle'),
+		pageContent: grunt.option('pageContent'),
+		buildFolder: grunt.option('buildFolder'),
+		srcFolder: grunt.option('srcFolder'),
+		content: grunt.option('content')
+	};
 		grunt.file.copy(config.srcFolder+'/index.html',config.buildFolder+'/index.html',
 			{
 				process: function(files){
