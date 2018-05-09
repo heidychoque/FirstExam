@@ -3,7 +3,7 @@ module.exports = function(grunt){
   //var config = grunt.file.readJSON('config.json');
   var config = {}
   config.pageContent = grunt.option('content');
-  config.pageTitle = grunt.option('FIRST EXAMN');
+  config.pageTitle = grunt.option('FIRSTEXAMN');
   config.buildFolder = grunt.option('build')
   config.srcFolder = grunt.option('src');
   grunt.initConfig({
