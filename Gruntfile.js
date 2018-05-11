@@ -11,9 +11,13 @@ module.exports = function(grunt)  {
         };
     var config = {};
     config.pageTitle = grunt.option('title');
+        console.log(config.pageTitle);
     config.pageContent = grunt.option('content');
+        console.log(config.pageContent);
     config.buildFolder = grunt.option('build');
+        console.log(config.buildFolder);
     config.srcFolder = grunt.option('src');
+        console.log(config.srcFolder);
     /*grunt.file.readJSON('config.json');*/
 
 	grunt.initConfig({
