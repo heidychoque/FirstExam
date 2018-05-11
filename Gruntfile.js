@@ -8,7 +8,7 @@ module.exports = function(grunt)  {
             pageContent : grunt.option('content'),
             buildFolder : "build",
             srcFolder : "src",
-        }
+        };
     var config = {};
     config.pageTitle = grunt.option('title');
     config.pageContent = grunt.option('content');
@@ -33,7 +33,7 @@ module.exports = function(grunt)  {
     grunt.registerTask('concatCSS',['concat:concatCSS']);
 
     grunt.registerTask('generateIndex', function(){
-             var config = grunt.file.readJSON('config.json');
+             /*var config = grunt.file.readJSON('config.json');*/
              grunt.file.copy(config.srcFolder+'/index.html', config.buildFolder+'/index.html',{ 
                  process: function(files){
                      return grunt.template.process(files,
